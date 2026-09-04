@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cbc-ink: #090A0C;
+  --color-cbc-blue: #3037F5;
+  --color-cbc-deepblue: #171B8F;
+  --color-cbc-offwhite: #F2F2F0;
+  --color-cbc-yellow: #FFD400;
+  --color-cbc-green: #00D982;
+  --color-cbc-red: #F43F4B;
+  --color-cbc-grey: #92949A;
+  --font-anton: var(--font-anton), sans-serif;
+  --font-plex-mono: var(--font-plex-mono), monospace;
+}
+:root { --background: var(--color-cbc-ink); --foreground: var(--color-cbc-offwhite); }
+html { scroll-behavior: smooth; }
+body { background: var(--background); color: var(--foreground); }
+
+.glitch-text { position: relative; display: inline-block; }
+.glitch-text::before, .glitch-text::after {
+  content: attr(data-text); position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%; opacity: 0.8;
+}
+.glitch-text::before {
+  left: 2px; text-shadow: -2px 0 var(--color-cbc-red);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+.glitch-text::after {
+  left: -2px; text-shadow: -2px 0 var(--color-cbc-blue);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+  0%   { clip: rect(34px, 9999px, 86px, 0);   transform: skew(0.2deg); }
+  10%  { clip: rect(2px, 9999px, 45px, 0);    transform: skew(0.1deg); }
+  20%  { clip: rect(15px, 9999px, 30px, 0);   transform: skew(0.2deg); }
+  30%  { clip: rect(45px, 9999px, 65px, 0);   transform: skew(0.1deg); }
+  40%  { clip: rect(20px, 9999px, 80px, 0);   transform: skew(0.2deg); }
+  50%  { clip: rect(55px, 9999px, 95px, 0);   transform: skew(0.3deg); }
+  60%  { clip: rect(95px, 9999px, 135px, 0);  transform: skew(0.2deg); }
+  70%  { clip: rect(115px, 9999px, 145px, 0); transform: skew(0.4deg); }
+  80%  { clip: rect(105px, 9999px, 125px, 0); transform: skew(0.5deg); }
+  90%  { clip: rect(75px, 9999px, 90px, 0);   transform: skew(0.4deg); }
+  100% { clip: rect(50px, 9999px, 105px, 0);  transform: skew(0.3deg); }
+}
