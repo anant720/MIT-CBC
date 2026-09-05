@@ -1,41 +1,41 @@
-# CBC Website v2 — MERN Stack
+# MIT CBC Website v2
 
-A full-stack rebuild of the MIT CBC website with a proper backend.
+The official student-led cybersecurity and blockchain club website of MIT ADT University.
 
-## Structure
-```
-CBC-Website - 2/
-├── backend/    → Express + Node.js REST API (port 5000)
-└── frontend/   → Next.js frontend (port 3000)
-```
+🌐 **Live Website:** [https://cbc-one-psi.vercel.app/](https://cbc-one-psi.vercel.app/)  
+⚙️ **Live API:** [https://cbc-backend-x4nm.onrender.com/api/v1/health](https://cbc-backend-x4nm.onrender.com/api/v1/health)
 
-## Quick Start
+## Architecture
 
-### 1. Backend
+This project is a monorepo consisting of a decoupled frontend and backend:
+
+- **Frontend (`/frontend`)**: Built with **Next.js 14**, React, Tailwind CSS, and Framer Motion for dynamic animations. Deployed on **Vercel**.
+- **Backend (`/backend`)**: Built with **Node.js** and **Express.js** providing a robust REST API. Connected to **Supabase** (PostgreSQL) for database management and Row Level Security (RLS). Deployed on **Render**.
+
+## Local Development
+
+### 1. Backend (API)
 ```bash
 cd backend
 npm install
-# Edit .env with your MongoDB URI
+# Create a .env file based on .env.example with your Supabase keys
 npm run dev
 ```
+The API will run on `http://localhost:5000`
 
-### 2. Frontend
+### 2. Frontend (UI)
 ```bash
 cd frontend
 npm install
+# Make sure to set NEXT_PUBLIC_API_URL in your .env.local if running a local backend
 npm run dev
 ```
+The frontend will run on `http://localhost:3000`
 
-Open http://localhost:3000
+## Features & Endpoints
 
-## API Endpoints
-- GET/POST  /api/v1/events
-- GET/POST  /api/v1/members  |  GET /api/v1/members/alumni
-- GET/POST  /api/v1/projects
-- GET/POST  /api/v1/articles
-- GET/POST  /api/v1/join
-- GET       /api/v1/health
-
-## MongoDB
-Default: `mongodb://localhost:27017/cbc-website`
-Update MONGODB_URI in `backend/.env` for MongoDB Atlas.
+- **`/events`**: Manage past and upcoming club events.
+- **`/members` & `/alumni`**: Showcase current core team members and alumni.
+- **`/projects`**: Highlight cybersecurity and blockchain projects.
+- **`/articles`**: Publish writeups, tutorials, and research.
+- **`/join`**: Public intake form for new student applications.
