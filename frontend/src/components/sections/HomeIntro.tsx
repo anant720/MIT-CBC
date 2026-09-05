@@ -55,7 +55,7 @@ export default function HomeIntro() {
             <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-cbc-blue translate-x-1/2 translate-y-1/2"></div>
 
             <div>
-              <div className="font-anton text-5xl md:text-6xl text-cbc-offwhite mb-2">150<span className="text-cbc-blue">+</span></div>
+              <div className="font-anton text-5xl md:text-6xl text-cbc-offwhite mb-2">29</div>
               <div className="text-cbc-grey font-mono text-[10px] tracking-widest uppercase">Active Members</div>
             </div>
             <div>

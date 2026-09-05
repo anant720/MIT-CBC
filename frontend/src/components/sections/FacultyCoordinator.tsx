@@ -28,12 +28,11 @@ export default function FacultyCoordinator() {
             className="group relative border border-cbc-grey/20 p-8 hover:border-cbc-blue transition-colors w-full bg-cbc-ink flex flex-col items-center shadow-[0_0_40px_rgba(0,0,0,0.5)]"
           >
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-2 border-cbc-grey/20 group-hover:border-cbc-blue transition-colors relative">
-              {/* Placeholder Photo */}
-              <div className="w-full h-full bg-cbc-grey/5 flex items-center justify-center text-cbc-grey/30">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </div>
+              <img 
+                src="/images/prof_aman_kamble.png" 
+                alt="Prof. Aman Kamble" 
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
             </div>
             
             <h3 className="font-anton text-3xl text-cbc-offwhite uppercase mb-2">Prof. Aman Kamble</h3>
