@@ -2,8 +2,7 @@
 
 The official student-led cybersecurity and blockchain club website of MIT ADT University.
 
-🌐 **Live Website:** [https://cbc-one-psi.vercel.app/](https://cbc-one-psi.vercel.app/)  
-⚙️ **Live API:** [https://cbc-backend-x4nm.onrender.com/api/v1/health](https://cbc-backend-x4nm.onrender.com/api/v1/health)
+🌐 **Live Website:** [https://cbc-one-psi.vercel.app/](https://cbc-one-psi.vercel.app/)
 
 ## Architecture
 
