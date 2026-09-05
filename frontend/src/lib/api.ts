@@ -51,28 +51,28 @@ export async function login(username: string, password: string): Promise<string>
 
 // Events
 export const createEvent = (data: any) => apiFetch<any>('/events', { method: 'POST', body: JSON.stringify(data) });
-export const updateEvent = (id: string, data: any) => apiFetch<any>(/events/, { method: 'PUT', body: JSON.stringify(data) });
-export const deleteEvent = (id: string) => apiFetch<any>(/events/, { method: 'DELETE' });
+export const updateEvent = (id: string, data: any) => apiFetch<any>(`/events/${id}`, { method: 'PUT', body: JSON.stringify(data) });
+export const deleteEvent = (id: string) => apiFetch<any>(`/events/${id}`, { method: 'DELETE' });
 export const getEvents   = () => apiFetch<any[]>("/events");
 export const getEvent    = (slug: string) => apiFetch<any>(`/events/${slug}`);
 
 // Members
 export const createMember = (data: any) => apiFetch<any>('/members', { method: 'POST', body: JSON.stringify(data) });
-export const updateMember = (id: string, data: any) => apiFetch<any>(/members/, { method: 'PUT', body: JSON.stringify(data) });
-export const deleteMember = (id: string) => apiFetch<any>(/members/, { method: 'DELETE' });
+export const updateMember = (id: string, data: any) => apiFetch<any>(`/members/${id}`, { method: 'PUT', body: JSON.stringify(data) });
+export const deleteMember = (id: string) => apiFetch<any>(`/members/${id}`, { method: 'DELETE' });
 export const getMembers  = () => apiFetch<any[]>("/members");
 export const getAlumni   = () => apiFetch<any[]>("/members/alumni");
 
 // Projects
 export const createProject = (data: any) => apiFetch<any>('/projects', { method: 'POST', body: JSON.stringify(data) });
-export const updateProject = (id: string, data: any) => apiFetch<any>(/projects/, { method: 'PUT', body: JSON.stringify(data) });
-export const deleteProject = (id: string) => apiFetch<any>(/projects/, { method: 'DELETE' });
+export const updateProject = (id: string, data: any) => apiFetch<any>(`/projects/${id}`, { method: 'PUT', body: JSON.stringify(data) });
+export const deleteProject = (id: string) => apiFetch<any>(`/projects/${id}`, { method: 'DELETE' });
 export const getProjects = () => apiFetch<any[]>("/projects");
 export const getProject  = (id: string) => apiFetch<any>(`/projects/${id}`);
 
 // Articles
 export const createArticle = (data: any) => apiFetch<any>('/articles', { method: 'POST', body: JSON.stringify(data) });
-export const deleteArticle = (slug: string) => apiFetch<any>(/articles/, { method: 'DELETE' });
+export const deleteArticle = (slug: string) => apiFetch<any>(`/articles/${slug}`, { method: 'DELETE' });
 export const getArticles = () => apiFetch<any[]>("/articles");
 export const getArticle  = (slug: string) => apiFetch<any>(`/articles/${slug}`);
 
